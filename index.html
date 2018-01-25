@@ -1,0 +1,53 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>NTU Open Day Application</title>
+    <meta name="description" content="Your virtual guide to Nottingham Trent University. Used to give tours around the campus.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="img/icon.png" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css?v=1.0">
+
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="loading-cover" class="valign-wrapper">
+        <div id="gradient-holder">
+        </div>
+        <h5 class="white-text hide-login">Tap to begin...</h5>
+        <img class="center-img animated zoomIn hide-login" src="img/icon.png" alt="NTUODA Logo" onclick="app.components.showLogin();">
+    </div>
+
+    <div id="content">
+        <header>
+            Header
+        </header>
+        <main>
+            <div class="iframe">
+                <div class="fade">
+                </div>
+                <iframe id="iframe" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2406.0713013247378!2d-1.1863965!3d52.9111439!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879c2882c8d0d7b%3A0x8fafea64a3966e25!2sNTU+Clifton+(Stop+CL93)!5e0!3m2!1sen!2suk!4v1512480023971" width="100%" height="100%" frameborder="0" style="border:0" onclick="document.getElementById('iframe').scrollIntoView({ behavior: 'smooth' });" allowfullscreen>
+                </iframe>
+            </div>
+        </main>
+        <article>
+            for each different tour
+        </article>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="js/web-components.js"></script>
+</body>
+
+</html>
