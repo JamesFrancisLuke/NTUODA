@@ -3,7 +3,6 @@ app.accounts = {
     signUp: function (email, password) {
         /*Creates an account, if no errors*/
         firebase.auth().createUserWithEmailAndPassword(email, password).then(function () {
-            app.components.removeOverlay('loading-cover');
             app.components.showOnboarding(email);
             Materialize.toast('Created an Account for: ' + email, 4000);
         }).catch(function (error) {
