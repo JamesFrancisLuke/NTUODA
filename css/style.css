@@ -93,6 +93,13 @@ main {
     width: 100%;
 }
 
+#menuIcon {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    z-index: 200;
+}
+
 .fade {
     width: 100%;
     height: 100%;
