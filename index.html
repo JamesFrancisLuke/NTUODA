@@ -30,7 +30,27 @@
 
     <div id="content">
         <header>
-            Header
+            <ul id="slide-out" class="side-nav">
+                <li>
+                    <div class="user-view">
+                        <div class="background">
+                            <img src="img/bg.jpg">
+                        </div>
+                        <a href="#!info"><span class="white-text">Open Day Account for:</span></a>
+                        <a href="#!email"><span class="white-text email">email@email.com</span></a>
+                    </div>
+                </li>
+                <li><a class="waves-effect" href="#!">Open Day Details</a></li>
+                <li><a class="waves-effect" href="#!">Current Events</a></li>
+                <li><a class="waves-effect" href="#!">Event Log</a></li>
+                <li>
+                    <div class="divider"></div>
+                </li>
+                <li><a class="subheader">Account</a></li>
+                <li><a class="waves-effect" href="#!">Settings</a></li>
+                <li><a class="waves-effect" href="#logout" onclick="app.accounts.logOut()">Log Out</a></li>
+            </ul>
+            <a href="#" data-activates="slide-out" class="button-collapse" id="menuIcon"><i class="material-icons">menu</i></a>
         </header>
         <main>
             <div class="iframe">
