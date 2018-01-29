@@ -47,7 +47,23 @@
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCSvQav0mY0Co2gg5l4CmiK0csOFnGLY9I",
+            authDomain: "ntuoda.firebaseapp.com",
+            databaseURL: "https://ntuoda.firebaseio.com",
+            projectId: "ntuoda",
+            storageBucket: "ntuoda.appspot.com",
+            messagingSenderId: "53318132645"
+        };
+        firebase.initializeApp(config);
+
+    </script>
+
     <script src="js/web-components.js"></script>
+    <script src="js/accounts-components.js"></script>
 </body>
 
 </html>
