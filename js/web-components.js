@@ -15,5 +15,331 @@ app.components = {
         /*Removes the overlay*/
         $("#" + name).fadeOut(500);
         $(".button-collapse").sideNav();
+        app.components.initMap();
+    },
+    initMap: function () {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: {
+                lat: 52.911826,
+                lng: -1.184794
+            },
+            zoom: 16,
+            disableDefaultUI: true,
+            mapTypeId: 'satellite',
+            styles: [
+                {
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#1d2c4d"
+      }
+    ]
+  },
+                {
+                    "elementType": "labels",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+      }
+    ]
+  },
+                {
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#8ec3b9"
+      }
+    ]
+  },
+                {
+                    "elementType": "labels.text.stroke",
+                    "stylers": [
+                        {
+                            "color": "#1a3646"
+      }
+    ]
+  },
+                {
+                    "featureType": "administrative.country",
+                    "elementType": "geometry.stroke",
+                    "stylers": [
+                        {
+                            "color": "#4b6878"
+      }
+    ]
+  },
+                {
+                    "featureType": "administrative.land_parcel",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+      }
+    ]
+  },
+                {
+                    "featureType": "administrative.land_parcel",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#64779e"
+      }
+    ]
+  },
+                {
+                    "featureType": "administrative.neighborhood",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+      }
+    ]
+  },
+                {
+                    "featureType": "administrative.province",
+                    "elementType": "geometry.stroke",
+                    "stylers": [
+                        {
+                            "color": "#4b6878"
+      }
+    ]
+  },
+                {
+                    "featureType": "landscape.man_made",
+                    "elementType": "geometry.stroke",
+                    "stylers": [
+                        {
+                            "color": "#334e87"
+      }
+    ]
+  },
+                {
+                    "featureType": "landscape.natural",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#023e58"
+      }
+    ]
+  },
+                {
+                    "featureType": "poi",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#283d6a"
+      }
+    ]
+  },
+                {
+                    "featureType": "poi",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#6f9ba5"
+      }
+    ]
+  },
+                {
+                    "featureType": "poi",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [
+                        {
+                            "color": "#1d2c4d"
+      }
+    ]
+  },
+                {
+                    "featureType": "poi.park",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "color": "#023e58"
+      }
+    ]
+  },
+                {
+                    "featureType": "poi.park",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#3C7680"
+      }
+    ]
+  },
+                {
+                    "featureType": "road",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#304a7d"
+      }
+    ]
+  },
+                {
+                    "featureType": "road",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#98a5be"
+      }
+    ]
+  },
+                {
+                    "featureType": "road",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [
+                        {
+                            "color": "#1d2c4d"
+      }
+    ]
+  },
+                {
+                    "featureType": "road.highway",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#2c6675"
+      }
+    ]
+  },
+                {
+                    "featureType": "road.highway",
+                    "elementType": "geometry.stroke",
+                    "stylers": [
+                        {
+                            "color": "#255763"
+      }
+    ]
+  },
+                {
+                    "featureType": "road.highway",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#b0d5ce"
+      }
+    ]
+  },
+                {
+                    "featureType": "road.highway",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [
+                        {
+                            "color": "#023e58"
+      }
+    ]
+  },
+                {
+                    "featureType": "transit",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#98a5be"
+      }
+    ]
+  },
+                {
+                    "featureType": "transit",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [
+                        {
+                            "color": "#1d2c4d"
+      }
+    ]
+  },
+                {
+                    "featureType": "transit.line",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "color": "#283d6a"
+      }
+    ]
+  },
+                {
+                    "featureType": "transit.station",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#3a4762"
+      }
+    ]
+  },
+                {
+                    "featureType": "water",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#0e1626"
+      }
+    ]
+  },
+                {
+                    "featureType": "water",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#4e6d70"
+      }
+    ]
+  }
+]
+        });
+
+        var contentString =
+            '<div class="infowindow">' +
+            '</div>' +
+            '<h3>ISTEC</h3>' +
+            '<div id="bodyContent">' +
+            '<p>Words.</p>' +
+            '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">' +
+            'https://en.wikipedia.org/w/index.php?title=Uluru</a> ' +
+            '(last visited June 22, 2009).</p>' +
+            '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString,
+            maxWidth: 200
+        });
+
+        var marker = new google.maps.Marker({
+            position: {
+                lat: 52.911826,
+                lng: -1.184794
+            },
+            map: map,
+            title: 'ISTEC: Building Information'
+        });
+        marker.addListener('click', function () {
+            infowindow.open(map, marker);
+        });
+
+        var contentString =
+            '<div class="infowindow">' +
+            '</div>' +
+            '<h3>ISTEC2</h3>' +
+            '<div id="bodyContent">' +
+            '<p>Words.</p>' +
+            '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">' +
+            'https://en.wikipedia.org/w/index.php?title=Uluru</a> ' +
+            '(last visited June 22, 2009).</p>' +
+            '</div>';
+
+        var infowindow2 = new google.maps.InfoWindow({
+            content: contentString,
+            maxWidth: 200
+        });
+
+        var marker2 = new google.maps.Marker({
+            position: {
+                lat: 52.911810,
+                lng: -1.184794
+            },
+            map: map,
+            title: 'ISTEC: Building Information'
+        });
+        marker2.addListener('click', function () {
+            infowindow2.open(map, marker2);
+        });
+
     }
 }

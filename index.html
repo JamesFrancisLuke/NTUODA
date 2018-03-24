@@ -24,7 +24,7 @@
     <div id="loading-cover" class="valign-wrapper">
         <div id="gradient-holder">
         </div>
-        <h5 class="white-text hide-login">Tap to begin...</h5>
+        <h5 class="white-text hide-login center-align">Tap to begin... <br> (Private use only)</h5>
         <img class="center-img animated zoomIn hide-login" src="img/icon.png" alt="NTUODA Logo" onclick="app.components.showLogin();">
     </div>
 
@@ -37,7 +37,7 @@
                             <img src="img/bg.jpg">
                         </div>
                         <a href="#!info"><span class="white-text">Open Day Account for:</span></a>
-                        <a href="#!email"><span class="white-text email">email@email.com</span></a>
+                        <a href="#!email"><span class="white-text OTP-email">email@email.com</span></a>
                     </div>
                 </li>
                 <li><a class="waves-effect" href="#!">Open Day Details</a></li>
@@ -51,19 +51,33 @@
                 <li><a class="waves-effect" href="#!">Settings</a></li>
                 <li><a class="waves-effect" href="#logout" onclick="app.accounts.logOut()">Log Out</a></li>
             </ul>
-            <a href="#" data-activates="slide-out" class="button-collapse" id="menuIcon"><i class="material-icons">menu</i></a>
+            <a href="#" data-activates="slide-out" class="button-collapse white-text" id="menuIcon"><i class="material-icons">menu</i></a>
         </header>
         <main>
             <div class="iframe">
                 <div class="fade">
                 </div>
-                <iframe id="iframe" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2406.0713013247378!2d-1.1863965!3d52.9111439!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879c2882c8d0d7b%3A0x8fafea64a3966e25!2sNTU+Clifton+(Stop+CL93)!5e0!3m2!1sen!2suk!4v1512480023971" width="100%" height="100%" frameborder="0" style="border:0" onclick="document.getElementById('iframe').scrollIntoView({ behavior: 'smooth' });" allowfullscreen>
-                </iframe>
+                <div id="map"></div>
             </div>
         </main>
-        <article>
-            for each different tour
-        </article>
+        <div class="container">
+            <article>
+                <div class="row">
+                    <div class="col s12">
+                        <div class="card hoverable" id="card2" onclick="document.getElementById('card2').scrollIntoView({ behavior: 'smooth' });">
+                            <div class="card-content">
+                                <span class="card-title">Event</span>
+                                <p>An event click to go to it...</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="#">Start Event</a>
+                                <a href="#">Ignore</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
     </div>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -82,7 +96,8 @@
         firebase.initializeApp(config);
 
     </script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gremlins.js/0.1.0/gremlins.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAfv-Lz9SJ0IDY1JZ8EZXZ9ri7kaSSlBI" async defer></script>
     <script src="js/web-components.js"></script>
     <script src="js/accounts-components.js"></script>
 </body>
