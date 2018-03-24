@@ -324,7 +324,6 @@ app.components = {
         });
         buildingEnhancement.setMap(map);
 
-
         var contentString =
             '<div class="infowindow">' +
             '</div>' +
@@ -335,35 +334,7 @@ app.components = {
             'https://en.wikipedia.org/w/index.php?title=Uluru</a> ' +
             '(last visited June 22, 2009).</p>' +
             '</div>';
-
-        var infowindow = new google.maps.InfoWindow({
-            content: contentString,
-            maxWidth: 200
-        });
-
-        var marker = new google.maps.Marker({
-            position: {
-                lat: 52.911826,
-                lng: -1.184794
-            },
-            map: map,
-            title: 'ISTEC: Building Information'
-        });
-        marker.addListener('click', function () {
-            infowindow.open(map, marker);
-        });
-
-        var contentString =
-            '<div class="infowindow">' +
-            '</div>' +
-            '<h3>ISTEC</h3>' +
-            '<div id="bodyContent">' +
-            '<p>Words.</p>' +
-            '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">' +
-            'https://en.wikipedia.org/w/index.php?title=Uluru</a> ' +
-            '(last visited June 22, 2009).</p>' +
-            '</div>';
-		var contentMAE =
+        var contentMAE =
             '<div class="infowindow">' +
             '</div>' +
             '<h3>Mary Anne Evans</h3>' +
@@ -373,8 +344,7 @@ app.components = {
             'https://en.wikipedia.org/w/index.php?title=Uluru</a> ' +
             '(last visited June 22, 2009).</p>' +
             '</div>';
-			
-		var contentERD =
+        var contentERD =
             '<div class="infowindow">' +
             '</div>' +
             '<h3>ERD</h3>' +
@@ -384,8 +354,7 @@ app.components = {
             'https://en.wikipedia.org/w/index.php?title=Uluru</a> ' +
             '(last visited June 22, 2009).</p>' +
             '</div>';
-			
-		var contentJCL =
+        var contentJCL =
             '<div class="infowindow">' +
             '</div>' +
             '<h3>John Clare Lecture Theatre </h3>' +
@@ -395,8 +364,7 @@ app.components = {
             'https://en.wikipedia.org/w/index.php?title=Uluru</a> ' +
             '(last visited June 22, 2009).</p>' +
             '</div>';
-			
-		var contentPavilion =
+        var contentPavilion =
             '<div class="infowindow">' +
             '</div>' +
             '<h3>The Pavilion </h3>' +
@@ -406,27 +374,9 @@ app.components = {
             'https://en.wikipedia.org/w/index.php?title=Uluru</a> ' +
             '(last visited June 22, 2009).</p>' +
             '</div>';
-		
-        var infowindow2 = new google.maps.InfoWindow({
-            content: contentString,
-            maxWidth: 200
-        });
 
-        var marker2 = new google.maps.Marker({
-            position: {
-                lat: 52.911810,
-                lng: -1.184794
-            },
-			map: map,
-            title: 'ISTEC: Building Information'
-            
-        });
-        marker2.addListener('click', function () {
-            infowindow2.open(map, marker2);
-        });
-      
         // Marker 3
-		   var infowindow3 = new google.maps.InfoWindow({
+        var infowindow3 = new google.maps.InfoWindow({
             content: contentMAE,
             maxWidth: 200
         });
@@ -436,17 +386,17 @@ app.components = {
                 lat: 52.911487,
                 lng: -1.184370
             },
-			map: map,
+            map: map,
             title: 'Mary Anne Evans '
-            
+
         });
         marker3.addListener('click', function () {
             infowindow3.open(map, marker3);
         });
-		
-		
-		//Marker 4 
-		var infowindow4 = new google.maps.InfoWindow({
+
+
+        //Marker 4 
+        var infowindow4 = new google.maps.InfoWindow({
             content: contentERD,
             maxWidth: 200
         });
@@ -456,16 +406,16 @@ app.components = {
                 lat: 52.909893,
                 lng: -1.187050
             },
-			map: map,
+            map: map,
             title: 'ERD'
-            
+
         });
         marker4.addListener('click', function () {
             infowindow4.open(map, marker4);
         });
-		
-		//Marker 5 
-		var infowindow5 = new google.maps.InfoWindow({
+
+        //Marker 5 
+        var infowindow5 = new google.maps.InfoWindow({
             content: contentJCL,
             maxWidth: 200
         });
@@ -475,17 +425,17 @@ app.components = {
                 lat: 52.911584,
                 lng: -1.185236
             },
-			map: map,
+            map: map,
             title: 'John Clare Lecture Theatre '
-            
+
         });
         marker5.addListener('click', function () {
             infowindow5.open(map, marker5);
         });
-		
-		
-		//Marker 6
-		var infowindow6 = new google.maps.InfoWindow({
+
+
+        //Marker 6
+        var infowindow6 = new google.maps.InfoWindow({
             content: contentPavilion,
             maxWidth: 200
         });
@@ -495,9 +445,9 @@ app.components = {
                 lat: 52.912114,
                 lng: -1.185164
             },
-			map: map,
+            map: map,
             title: 'Pavilion '
-            
+
         });
         marker6.addListener('click', function () {
             infowindow6.open(map, marker6);
