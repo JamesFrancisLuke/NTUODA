@@ -284,5 +284,62 @@ app.components = {
   }
 ]
         });
+
+        var contentString =
+            '<div class="infowindow">' +
+            '</div>' +
+            '<h3>ISTEC</h3>' +
+            '<div id="bodyContent">' +
+            '<p>Words.</p>' +
+            '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">' +
+            'https://en.wikipedia.org/w/index.php?title=Uluru</a> ' +
+            '(last visited June 22, 2009).</p>' +
+            '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString,
+            maxWidth: 200
+        });
+
+        var marker = new google.maps.Marker({
+            position: {
+                lat: 52.911826,
+                lng: -1.184794
+            },
+            map: map,
+            title: 'ISTEC: Building Information'
+        });
+        marker.addListener('click', function () {
+            infowindow.open(map, marker);
+        });
+
+        var contentString =
+            '<div class="infowindow">' +
+            '</div>' +
+            '<h3>ISTEC2</h3>' +
+            '<div id="bodyContent">' +
+            '<p>Words.</p>' +
+            '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">' +
+            'https://en.wikipedia.org/w/index.php?title=Uluru</a> ' +
+            '(last visited June 22, 2009).</p>' +
+            '</div>';
+
+        var infowindow2 = new google.maps.InfoWindow({
+            content: contentString,
+            maxWidth: 200
+        });
+
+        var marker2 = new google.maps.Marker({
+            position: {
+                lat: 52.911810,
+                lng: -1.184794
+            },
+            map: map,
+            title: 'ISTEC: Building Information'
+        });
+        marker2.addListener('click', function () {
+            infowindow2.open(map, marker2);
+        });
+
     }
 }
