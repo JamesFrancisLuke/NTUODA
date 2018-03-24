@@ -289,6 +289,42 @@ app.components = {
         this.getLocation();
     },
     addBuildings: function () {
+        //draw istec
+        var istecCoords = [
+            {
+                lat: 52.911176,
+                lng: -1.184473
+            },
+            {
+                lat: 52.910969,
+                lng: -1.184064
+            },
+            {
+                lat: 52.910589,
+                lng: -1.184592
+            },
+            {
+                lat: 52.910781,
+                lng: -1.185003
+            },
+            {
+                lat: 52.911176,
+                lng: -1.184473
+            }
+        ];
+
+        // Construct the polygon.
+        var buildingEnhancement = new google.maps.Polygon({
+            paths: istecCoords,
+            strokeColor: '#0000000',
+            strokeOpacity: 1,
+            strokeWeight: 2,
+            fillColor: '#121212',
+            fillOpacity: 1
+        });
+        buildingEnhancement.setMap(map);
+
+
         var contentString =
             '<div class="infowindow">' +
             '</div>' +
