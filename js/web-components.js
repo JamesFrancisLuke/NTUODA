@@ -332,59 +332,44 @@ app.components = {
 
             var contentString =
                 '<div class="infowindow">' +
-                '</div>' +
-                '<h3>ISTEC</h3>' +
+                '<div class="background" style=" padding:4px; background-image: url(https://www4.ntu.ac.uk/sat/images/galleries/computing_informatics/130127.jpg); padding-top: 80px;">Mary Anne Evans</div>' +
                 '<div id="bodyContent">' +
-                '<p>Words.</p>' +
-                '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">' +
-                'https://en.wikipedia.org/w/index.php?title=Uluru</a> ' +
-                '(last visited June 22, 2009).</p>' +
-                '</div>';
+                '<p>A building containing Labs, which allow you to complete practical work - such as web development, using Photoshop and other forms that are required by the course. </p>' +
+                '<div class="row"><button class="btn waves-effect waves-light col s12" type="submit" name="action" onclick="app.components.map.drawPath(52.911487, -1.184370)">Track<i class="material-icons right">location_searching</i></button>' +
+                '<button class="waves-effect col s12 btn-flat" type="submit" name="action" onclick="app.components.map.openData()">More Info<i class="material-icons right">info</i></button></div></div></div>';
             var contentMAE =
                 '<div class="infowindow">' +
-                '</div>' +
-                '<h3>Mary Anne Evans</h3>' +
+                '<div class="background" style=" padding:4px; background-image: url(https://www4.ntu.ac.uk/sat/images/galleries/computing_informatics/130127.jpg); padding-top: 80px;">Mary Anne Evans</div>' +
                 '<div id="bodyContent">' +
-                '<p>Words.</p>' +
-                '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">' +
-                'https://en.wikipedia.org/w/index.php?title=Uluru</a> ' +
-                '(last visited June 22, 2009).</p>' +
-                '<div class="row"><button class="btn waves-effect waves-light col s12" type="submit" name="action" onclick="app.components.map.drawPath(52.911487, -1.184370)">Track<i class="material-icons right">send</i></button></div></div>';
+                '<p>A building containing Labs, which allow you to complete practical work - such as web development, using Photoshop and other forms that are required by the course. </p>' +
+                '<div class="row"><button class="btn waves-effect waves-light col s12" type="submit" name="action" onclick="app.components.map.drawPath(52.911487, -1.184370)">Track<i class="material-icons right">location_searching</i></button>' +
+                '<button class="waves-effect col s12 btn-flat" type="submit" name="action" onclick="app.components.map.openData()">More Info<i class="material-icons right">info</i></button></div></div></div>';
             var contentERD =
                 '<div class="infowindow">' +
-                '</div>' +
-                '<h3>ERD</h3>' +
+                '<div class="background" style=" padding:4px; background-image: url(https://www4.ntu.ac.uk/sat/images/galleries/environmental_chamber/130954.jpg); padding-top: 80px;">Erasmus Darwin</div>' +
                 '<div id="bodyContent">' +
-                '<p>Words.</p>' +
-                '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">' +
-                'https://en.wikipedia.org/w/index.php?title=Uluru</a> ' +
-                '(last visited June 22, 2009).</p>' +
-                '</div>';
+                '<p>A building containing Labs, which allow you to complete practical work - such as web development, using Photoshop and other forms that are required by the course. </p>' +
+                '<div class="row"><button class="btn waves-effect waves-light col s12" type="submit" name="action" onclick="app.components.map.drawPath(52.911487, -1.184370)">Track<i class="material-icons right">location_searching</i></button>' +
+                '<button class="waves-effect col s12 btn-flat" type="submit" name="action" onclick="app.components.map.openData()">More Info<i class="material-icons right">info</i></button></div></div></div>';
             var contentJCL =
                 '<div class="infowindow">' +
-                '</div>' +
-                '<h3>John Clare Lecture Theatre </h3>' +
+                '<div class="background" style=" padding:4px; background-image: url(https://hughrichards.files.wordpress.com/2013/02/url.jpg); padding-top: 80px;">John Clare Lecture Theartre</div>' +
                 '<div id="bodyContent">' +
-                '<p>Words.</p>' +
-                '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">' +
-                'https://en.wikipedia.org/w/index.php?title=Uluru</a> ' +
-                '(last visited June 22, 2009).</p>' +
-                '</div>';
+                '<p>A building containing Labs, which allow you to complete practical work - such as web development, using Photoshop and other forms that are required by the course. </p>' +
+                '<div class="row"><button class="btn waves-effect waves-light col s12" type="submit" name="action" onclick="app.components.map.drawPath(52.911487, -1.184370)">Track<i class="material-icons right">location_searching</i></button>' +
+                '<button class="waves-effect col s12 btn-flat" type="submit" name="action" onclick="app.components.map.openData()">More Info<i class="material-icons right">info</i></button></div></div></div>';
             var contentPavilion =
                 '<div class="infowindow">' +
-                '</div>' +
-                '<h3>The Pavilion </h3>' +
+                '<div class="background" style=" padding:4px; background-image: url(https://www.ntu.ac.uk/__data/assets/image/0016/330235/clifton-pavilion-exterior.jpg); padding-top: 80px;">Pavillion</div>' +
                 '<div id="bodyContent">' +
-                '<p>Words.</p>' +
-                '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">' +
-                'https://en.wikipedia.org/w/index.php?title=Uluru</a> ' +
-                '(last visited June 22, 2009).</p>' +
-                '</div>';
+                '<p>A building containing Labs, which allow you to complete practical work - such as web development, using Photoshop and other forms that are required by the course. </p>' +
+                '<div class="row"><button class="btn waves-effect waves-light col s12" type="submit" name="action" onclick="app.components.map.drawPath(52.911487, -1.184370)">Track<i class="material-icons right">location_searching</i></button>' +
+                '<button class="waves-effect col s12 btn-flat" type="submit" name="action" onclick="app.components.map.openData()">More Info<i class="material-icons right">info</i></button></div></div></div>';
 
             // Marker 3
             var infowindow3 = new google.maps.InfoWindow({
                 content: contentMAE,
-                maxWidth: 200
+                maxWidth: 223
             });
 
             var marker3 = new google.maps.Marker({
@@ -404,7 +389,7 @@ app.components = {
             //Marker 4 
             var infowindow4 = new google.maps.InfoWindow({
                 content: contentERD,
-                maxWidth: 200
+                maxWidth: 223
             });
 
             var marker4 = new google.maps.Marker({
@@ -423,7 +408,7 @@ app.components = {
             //Marker 5 
             var infowindow5 = new google.maps.InfoWindow({
                 content: contentJCL,
-                maxWidth: 200
+                maxWidth: 223
             });
 
             var marker5 = new google.maps.Marker({
@@ -443,7 +428,7 @@ app.components = {
             //Marker 6
             var infowindow6 = new google.maps.InfoWindow({
                 content: contentPavilion,
-                maxWidth: 200
+                maxWidth: 223
             });
 
             var marker6 = new google.maps.Marker({
