@@ -127,6 +127,16 @@ article {
     z-index: 50;
 }
 
-.infowindow: {
-    max-width: 280px;
+.gm-style-iw {
+    top: 22px !important;
+    left: 22px !important;
+}
+
+.background {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    -webkit-text-stroke: 1px black;
+    font-weight: 800;
+    font-size: 18px;
 }
