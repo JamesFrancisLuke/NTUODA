@@ -1,6 +1,7 @@
 var app = {}
 var map;
 var posStore = [];
+var lineDraw;
 app.components = {
     /* Components is only for document components, all data interaction and database edition shouldn't happen in here. */
     showLogin: function () {
@@ -349,21 +350,21 @@ app.components = {
                 '<div class="background" style=" padding:4px; background-image: url(https://www4.ntu.ac.uk/sat/images/galleries/environmental_chamber/130954.jpg); padding-top: 80px;">Erasmus Darwin</div>' +
                 '<div id="bodyContent">' +
                 '<p>A building containing Labs, which allow you to complete practical work - such as web development, using Photoshop and other forms that are required by the course. </p>' +
-                '<div class="row"><button class="btn waves-effect waves-light col s12" type="submit" name="action" onclick="app.components.map.drawPath(52.911487, -1.184370)">Track<i class="material-icons right">location_searching</i></button>' +
+                '<div class="row"><button class="btn waves-effect waves-light col s12" type="submit" name="action" onclick="app.components.map.drawPath(52.909893, -1.187050)">Track<i class="material-icons right">location_searching</i></button>' +
                 '<button class="waves-effect col s12 btn-flat" type="submit" name="action" onclick="app.components.map.openData()">More Info<i class="material-icons right">info</i></button></div></div></div>';
             var contentJCL =
                 '<div class="infowindow">' +
                 '<div class="background" style=" padding:4px; background-image: url(https://hughrichards.files.wordpress.com/2013/02/url.jpg); padding-top: 80px;">John Clare Lecture Theartre</div>' +
                 '<div id="bodyContent">' +
                 '<p>A building containing Labs, which allow you to complete practical work - such as web development, using Photoshop and other forms that are required by the course. </p>' +
-                '<div class="row"><button class="btn waves-effect waves-light col s12" type="submit" name="action" onclick="app.components.map.drawPath(52.911487, -1.184370)">Track<i class="material-icons right">location_searching</i></button>' +
+                '<div class="row"><button class="btn waves-effect waves-light col s12" type="submit" name="action" onclick="app.components.map.drawPath(52.911584, -1.185236)">Track<i class="material-icons right">location_searching</i></button>' +
                 '<button class="waves-effect col s12 btn-flat" type="submit" name="action" onclick="app.components.map.openData()">More Info<i class="material-icons right">info</i></button></div></div></div>';
             var contentPavilion =
                 '<div class="infowindow">' +
                 '<div class="background" style=" padding:4px; background-image: url(https://www.ntu.ac.uk/__data/assets/image/0016/330235/clifton-pavilion-exterior.jpg); padding-top: 80px;">Pavillion</div>' +
                 '<div id="bodyContent">' +
                 '<p>A building containing Labs, which allow you to complete practical work - such as web development, using Photoshop and other forms that are required by the course. </p>' +
-                '<div class="row"><button class="btn waves-effect waves-light col s12" type="submit" name="action" onclick="app.components.map.drawPath(52.911487, -1.184370)">Track<i class="material-icons right">location_searching</i></button>' +
+                '<div class="row"><button class="btn waves-effect waves-light col s12" type="submit" name="action" onclick="app.components.map.drawPath(52.912114, -1.185164)">Track<i class="material-icons right">location_searching</i></button>' +
                 '<button class="waves-effect col s12 btn-flat" type="submit" name="action" onclick="app.components.map.openData()">More Info<i class="material-icons right">info</i></button></div></div></div>';
 
             // Marker 3
@@ -479,11 +480,15 @@ app.components = {
             }
         },
         drawPath: function (a, b) {
+            if (lineDraw != null) {
+                lineDraw.setMap(null);
+            }
+
             var lineCoordinates = [
                 new google.maps.LatLng(posStore[0], posStore[1]),
                 new google.maps.LatLng(a, b)
             ];
-            var line = new google.maps.Polyline({
+            lineDraw = new google.maps.Polyline({
                 path: lineCoordinates,
                 geodesic: true,
                 strokeColor: 'rgb(233, 30, 99)',
@@ -491,7 +496,7 @@ app.components = {
                 strokeWeight: 4
             });
 
-            line.setMap(map);
+            lineDraw.setMap(map);
         }
     }
 }
