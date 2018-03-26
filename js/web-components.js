@@ -337,35 +337,35 @@ app.components = {
                 '<div id="bodyContent">' +
                 '<p>A building containing Labs, which allow you to complete practical work - such as web development, using Photoshop and other forms that are required by the course. </p>' +
                 '<div class="row"><button class="btn waves-effect waves-light col s12" type="submit" name="action" onclick="app.components.map.drawPath(52.911487, -1.184370)">Track<i class="material-icons right">location_searching</i></button>' +
-                '<button class="waves-effect col s12 btn-flat" type="submit" name="action" onclick="app.components.map.openData()">More Info<i class="material-icons right">info</i></button></div></div></div>';
+                '<button class="waves-effect col s12 btn-flat" type="submit" name="action" onclick="app.components.map.openData(1)">More Info<i class="material-icons right">info</i></button></div></div></div>';
             var contentMAE =
                 '<div class="infowindow">' +
                 '<div class="background" style=" padding:4px; background-image: url(https://www4.ntu.ac.uk/sat/images/galleries/computing_informatics/130127.jpg); padding-top: 80px;">Mary Anne Evans</div>' +
                 '<div id="bodyContent">' +
                 '<p>A building containing Labs, which allow you to complete practical work - such as web development, using Photoshop and other forms that are required by the course. </p>' +
                 '<div class="row"><button class="btn waves-effect waves-light col s12" type="submit" name="action" onclick="app.components.map.drawPath(52.911487, -1.184370)">Track<i class="material-icons right">location_searching</i></button>' +
-                '<button class="waves-effect col s12 btn-flat" type="submit" name="action" onclick="app.components.map.openData()">More Info<i class="material-icons right">info</i></button></div></div></div>';
+                '<button class="waves-effect col s12 btn-flat" type="submit" name="action" onclick="app.components.map.openData(2)">More Info<i class="material-icons right">info</i></button></div></div></div>';
             var contentERD =
                 '<div class="infowindow">' +
                 '<div class="background" style=" padding:4px; background-image: url(https://www4.ntu.ac.uk/sat/images/galleries/environmental_chamber/130954.jpg); padding-top: 80px;">Erasmus Darwin</div>' +
                 '<div id="bodyContent">' +
                 '<p>A building containing Labs, which allow you to complete practical work - such as web development, using Photoshop and other forms that are required by the course. </p>' +
                 '<div class="row"><button class="btn waves-effect waves-light col s12" type="submit" name="action" onclick="app.components.map.drawPath(52.909893, -1.187050)">Track<i class="material-icons right">location_searching</i></button>' +
-                '<button class="waves-effect col s12 btn-flat" type="submit" name="action" onclick="app.components.map.openData()">More Info<i class="material-icons right">info</i></button></div></div></div>';
+                '<button class="waves-effect col s12 btn-flat" type="submit" name="action" onclick="app.components.map.openData(3)">More Info<i class="material-icons right">info</i></button></div></div></div>';
             var contentJCL =
                 '<div class="infowindow">' +
                 '<div class="background" style=" padding:4px; background-image: url(https://hughrichards.files.wordpress.com/2013/02/url.jpg); padding-top: 80px;">John Clare Lecture Theartre</div>' +
                 '<div id="bodyContent">' +
                 '<p>A building containing Labs, which allow you to complete practical work - such as web development, using Photoshop and other forms that are required by the course. </p>' +
                 '<div class="row"><button class="btn waves-effect waves-light col s12" type="submit" name="action" onclick="app.components.map.drawPath(52.911584, -1.185236)">Track<i class="material-icons right">location_searching</i></button>' +
-                '<button class="waves-effect col s12 btn-flat" type="submit" name="action" onclick="app.components.map.openData()">More Info<i class="material-icons right">info</i></button></div></div></div>';
+                '<button class="waves-effect col s12 btn-flat" type="submit" name="action" onclick="app.components.map.openData(4)">More Info<i class="material-icons right">info</i></button></div></div></div>';
             var contentPavilion =
                 '<div class="infowindow">' +
                 '<div class="background" style=" padding:4px; background-image: url(https://www.ntu.ac.uk/__data/assets/image/0016/330235/clifton-pavilion-exterior.jpg); padding-top: 80px;">Pavillion</div>' +
                 '<div id="bodyContent">' +
                 '<p>A building containing Labs, which allow you to complete practical work - such as web development, using Photoshop and other forms that are required by the course. </p>' +
                 '<div class="row"><button class="btn waves-effect waves-light col s12" type="submit" name="action" onclick="app.components.map.drawPath(52.912114, -1.185164)">Track<i class="material-icons right">location_searching</i></button>' +
-                '<button class="waves-effect col s12 btn-flat" type="submit" name="action" onclick="app.components.map.openData()">More Info<i class="material-icons right">info</i></button></div></div></div>';
+                '<button class="waves-effect col s12 btn-flat" type="submit" name="action" onclick="app.components.map.openData(5)">More Info<i class="material-icons right">info</i></button></div></div></div>';
 
             // Marker 3
             var infowindow3 = new google.maps.InfoWindow({
@@ -497,6 +497,9 @@ app.components = {
             });
 
             lineDraw.setMap(map);
+        },
+        openData: function (building) {
+            $("#main").append("<div class=\"full-page animated slideInDown\"><div class=\"col s12 pink white-text\"><h2 style=\"padding: 0px;\">Building Name.</h2></div><div class=\"col s12 pink lighten-1 white-text\"> Short Description </div><div class=\"row\"><div class=\"col s12 m4 black-text image-info\"></div><div class=\"col s12 m8 white black-text\"> other data </div></div><button onclick=\"$('.full-page').remove();\">Close</button></div>");
         }
     }
 }
