@@ -463,6 +463,7 @@ app.components = {
             });
             marker7.addListener('click', function () {
                 infowindow7.open(map, marker7);
+            });
                 
         },
         resetMap: function () {
