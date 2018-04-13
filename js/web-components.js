@@ -464,6 +464,27 @@ app.components = {
             marker7.addListener('click', function () {
                 infowindow7.open(map, marker7);
             });
+            
+            
+            //Marker 8
+            var infowindow8 = new google.maps.InfoWindow({
+                content: contentISTEC,
+                maxWidth: 223
+            });
+
+            var marker8 = new google.maps.Marker({
+                position: {
+                    lat: 52.910909,
+                    lng: -1.184520
+                },
+                map: map,
+                title: 'ISTEC '
+
+            });
+            marker8.addListener('click', function () {
+                infowindow8.open(map, marker8);
+            });
+            
                 
         },
         resetMap: function () {
