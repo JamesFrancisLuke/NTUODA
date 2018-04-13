@@ -444,6 +444,26 @@ app.components = {
             marker6.addListener('click', function () {
                 infowindow6.open(map, marker6);
             });
+            
+            
+            //Marker 7
+            var infowindow7 = new google.maps.InfoWindow({
+                content: contentABK,
+                maxWidth: 223
+            });
+            
+            var marker7 = new google.maps.Marker({
+                position: {
+                    lat: 52.911158,
+                    lng: -1.185074
+                },
+                map: map,
+                title: 'Ada Byron King '
+                
+            });
+            marker7.addListener('click', function () {
+                infowindow7.open(map, marker7);
+                
         },
         resetMap: function () {
             /* Reloads the map at location */
