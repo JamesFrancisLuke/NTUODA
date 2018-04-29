@@ -554,7 +554,16 @@ app.components = {
                         ["Erasmus Darwin", "Erasmus Darwin in a speciality building on Clifton Campus, with a state-of-the-art media lab for student who are interested in game design or digital media.", "Some words..."],
                         ["John Clare Lecture Theatre", "A popular 150-seater lecture theatre for large hour-long lectures that takes place on Clifton Campus", "Some words..."],
                         ["Pavillion", "Live and learn alongside 8,000 students, in a place where buzzing social venues, ultra-modern learning spaces and cosy accommodation combine to create a thriving student community.", "Some words..."]]
-            $("#main").append("<div class=\"full-page animated slideInDown\"><div class=\"col s12 pink white-text\"><h2 style=\"padding: 0px;\">" + data[building][0] + "</h2></div><div class=\"col s12 pink lighten-1 white-text\"> " + data[building][1] + " </div><div class=\"row\"><div class=\"col s12 m4 black-text image-info\" style=\"background-image: url('img/buildings/" + building + ".jpg');\"></div><div class=\"col s12 m8 white black-text\"> " + data[building][2] + " </div></div><a href='#' style='color: white; position: fixed; top: 8px; right: 8px;' onclick=\"$('.full-page').remove();\">X</a></div>");
+            $("#main").append("<div class=\"full-page animated slideInDown\"><div class=\"col s12 pink white-text\"><h2 style=\"padding: 0px;\">" + data[building][0] + "</h2></div><div class=\"col s12 pink lighten-1 white-text\"> " + data[building][1] + " </div><div class=\"row\"><div class=\"col s12 m4 black-text image-info\" style=\"background-image: url('img/buildings/" + building + ".jpg');\"></div><div class=\"col s12 m8 white black-text\"> " + data[building][2] + " <br> <center><a class=\"btn-floating btn-large waves-effect waves-light green\" onclick=\"app.accounts.data.addVotes(" + building + ", 1)\"><i class=\"material-icons\">thumb_up</i></a> <span id=\"" + building + "votes\"></span> Votes <a class=\"btn-floating btn-large waves-effect waves-light red\" onclick=\"app.accounts.data.addVotes(" + building + ", -1)\"><i class=\"material-icons\">thumb_down</i></a></center> </div></div><a href='#' style='color: white; position: fixed; top: 8px; right: 8px;' onclick=\"$('.full-page').remove();\">X</a></div>");
+
+            var dataVotes = firebase.database().ref('votes');
+            dataVotes.on('value', function (snapshot) {
+                for (var i = 0; i < snapshot.val().length; i++) {
+                    if ($('#' + i + 'votes').length) {
+                        $('#' + i + 'votes').text(snapshot.val()[i]);
+                    }
+                }
+            });
         }
     }
 }

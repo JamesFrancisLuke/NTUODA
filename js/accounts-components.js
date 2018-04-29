@@ -51,6 +51,7 @@ app.accounts = {
                         $("#eventsOutput").append("<article><div class=\"row\"><div class=\"col s12\"><div class=\"card hoverable horizontal\" id=\"card" + key + "\" onclick=\"document.getElementById('card" + key + "').scrollIntoView({ behavior: 'smooth' });\"><div class=\"card-image\"><img src=\"" + data[key].image + "\"></div><div class=\"card-stacked\"><div class=\"card-content\"><span class=\"card-title\">" + data[key].name + "</span><p>" + data[key].desc + "</p></div><div class=\"card-action\"><a href=\"#\" onclick=\"app.components.map.openData(" + data[key].building + ")\">Open Building</a><a href=\"#\" onclick=\"app.components.map.drawPath(" + data[key].location + ")\">Show Location</a></div></div></div></div></div></article>");
                     });
                 });
+
             } else {
                 window.location.reload(true);
             }
@@ -70,6 +71,13 @@ app.accounts = {
             });
             console.log("Ran...");
             app.components.removeOverlay('loading-cover');
+        },
+        addVotes: function (building, vote) {
+            var voteRef = firebase.database().ref('votes/' + building);
+            voteRef.transaction(function (post) {
+                post = post + vote;
+                return post;
+            });
         }
     }
 }
