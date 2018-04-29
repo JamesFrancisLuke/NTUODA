@@ -78,6 +78,36 @@ app.accounts = {
                 post = post + vote;
                 return post;
             });
+        },
+        addReaction: function (building, reaction) {
+            var reactRef = firebase.database().ref('reaction/' + building + '/' + reaction);
+            $("#reactionBar").remove();
+            reactRef.transaction(function (post) {
+                post = post + 1;
+                return post;
+            });
+
+            firebase.database().ref('reaction/' + building).once('value').then(function (snapshot) {
+                $("#chartHolder").append("<canvas id=\"myChart\"></canvas>");
+                var ctx = document.getElementById('myChart').getContext('2d');
+                var chart = new Chart(ctx, {
+                    // The type of chart we want to create
+                    type: 'doughnut',
+
+                    // The data for our dataset
+                    data: {
+                        labels: ["Happy", "Good", "Not Good", "Bad"],
+                        datasets: [{
+                            data: [snapshot.val().happy, snapshot.val().good, snapshot.val().notgood, snapshot.val().bad],
+                            backgroundColor: ["#2ECC40", "#0074D9", "#FF851B", "#FF4136"]
+                    }],
+
+                    },
+
+                    // Configuration options go here
+                    options: {}
+                });
+            });
         }
     }
 }
