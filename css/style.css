@@ -140,3 +140,29 @@ article {
     font-weight: 800;
     font-size: 18px;
 }
+
+.full-page {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: white;
+    color: black;
+    overflow: auto;
+}
+
+.full-page .pink {
+    padding: 40px;
+}
+
+.image-info {
+    padding: 0;
+    height: 300px;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(../img/buildings/2.jpg);
+}
