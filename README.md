@@ -9,6 +9,6 @@ projectId: ntuoda
 
 storageBucket: ntuoda.appspot.com
 ## Live Demo
-live secure demo: jameswilliams.codes/NTUODA
+live secure demo: http://jameswilliams.codes/ntuoda
 
 live demo password: pasword1234
