@@ -1,0 +1,16 @@
+{
+    "short_name": "NTUODA",
+    "name": "NTU Open Day Application",
+    "icons": [
+        {
+            "src": "img/icon.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        }
+    ],
+    "start_url": "index.html",
+    "background_color": "#4b5fff",
+    "display": "standalone",
+    "theme_color": "#4b5fff",
+    "orientation": "portrait"
+}
