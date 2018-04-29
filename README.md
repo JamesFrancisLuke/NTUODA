@@ -9,6 +9,6 @@ projectId: ntuoda
 
 storageBucket: ntuoda.appspot.com
 ## Live Demo
-live secure demo: https://groupproject123.bitballoon.com
+live secure demo: jameswilliams.codes/NTUODA
 
 live demo password: pasword1234
