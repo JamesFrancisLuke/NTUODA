@@ -321,22 +321,28 @@ app.components = {
 
             var buildingEnhancement = new google.maps.Polygon({
                 paths: istecCoords,
-                strokeColor: '#0000000',
+                strokeColor: 'rgb(233, 30, 99)',
                 strokeOpacity: 1,
                 strokeWeight: 2,
-                fillColor: '#121212',
+                fillColor: 'rgb(233, 30, 99)',
                 fillOpacity: 1
             });
             buildingEnhancement.setMap(map);
 
             /* Creates the data locations */
-
-            var contentString =
+            var contentABK =
                 '<div class="infowindow">' +
-                '<div class="background" style=" padding:4px; background-image: url(\'img/buildings/5.jpg\'); padding-top: 80px;">Mary Anne Evans</div>' +
+                '<div class="background" style=" padding:4px; background-image: url(\'img/buildings/0.jpg\'); padding-top: 80px;">ABK</div>' +
                 '<div id="bodyContent">' +
                 '<p>A building containing Labs, which allow you to complete practical work - such as web development, using Photoshop and other forms that are required by the course. </p>' +
-                '<div class="row"><button class="btn waves-effect waves-light col s12" type="submit" name="action" onclick="app.components.map.drawPath(52.911487, -1.184370)">Track<i class="material-icons right">location_searching</i></button>' +
+                '<div class="row"><button class="btn waves-effect waves-light col s12" type="submit" name="action" onclick="app.components.map.drawPath(52.912114, -1.185164)">Track<i class="material-icons right">location_searching</i></button>' +
+                '<button class="waves-effect col s12 btn-flat" type="submit" name="action" onclick="app.components.map.openData(0)">More Info<i class="material-icons right">info</i></button></div></div></div>';
+            var contentISTEC =
+                '<div class="infowindow">' +
+                '<div class="background" style=" padding:4px; background-image: url(\'img/buildings/1.jpg\'); padding-top: 80px;">ISTEC</div>' +
+                '<div id="bodyContent">' +
+                '<p>A building containing Labs, which allow you to complete practical work - such as web development, using Photoshop and other forms that are required by the course. </p>' +
+                '<div class="row"><button class="btn waves-effect waves-light col s12" type="submit" name="action" onclick="app.components.map.drawPath(52.912114, -1.185164)">Track<i class="material-icons right">location_searching</i></button>' +
                 '<button class="waves-effect col s12 btn-flat" type="submit" name="action" onclick="app.components.map.openData(1)">More Info<i class="material-icons right">info</i></button></div></div></div>';
             var contentMAE =
                 '<div class="infowindow">' +
@@ -366,20 +372,6 @@ app.components = {
                 '<p>A building containing Labs, which allow you to complete practical work - such as web development, using Photoshop and other forms that are required by the course. </p>' +
                 '<div class="row"><button class="btn waves-effect waves-light col s12" type="submit" name="action" onclick="app.components.map.drawPath(52.912114, -1.185164)">Track<i class="material-icons right">location_searching</i></button>' +
                 '<button class="waves-effect col s12 btn-flat" type="submit" name="action" onclick="app.components.map.openData(5)">More Info<i class="material-icons right">info</i></button></div></div></div>';
-            var contentABK =
-                '<div class="infowindow">' +
-                '<div class="background" style=" padding:4px; background-image: url(https://www.ntu.ac.uk/__data/assets/image/0016/330235/clifton-pavilion-exterior.jpg); padding-top: 80px;">Pavillion</div>' +
-                '<div id="bodyContent">' +
-                '<p>A building containing Labs, which allow you to complete practical work - such as web development, using Photoshop and other forms that are required by the course. </p>' +
-                '<div class="row"><button class="btn waves-effect waves-light col s12" type="submit" name="action" onclick="app.components.map.drawPath(52.912114, -1.185164)">Track<i class="material-icons right">location_searching</i></button>' +
-                '<button class="waves-effect col s12 btn-flat" type="submit" name="action" onclick="app.components.map.openData()">More Info<i class="material-icons right">info</i></button></div></div></div>';
-            var contentISTEC =
-                '<div class="infowindow">' +
-                '<div class="background" style=" padding:4px; background-image: url(https://www.ntu.ac.uk/__data/assets/image/0016/330235/clifton-pavilion-exterior.jpg); padding-top: 80px;">Pavillion</div>' +
-                '<div id="bodyContent">' +
-                '<p>A building containing Labs, which allow you to complete practical work - such as web development, using Photoshop and other forms that are required by the course. </p>' +
-                '<div class="row"><button class="btn waves-effect waves-light col s12" type="submit" name="action" onclick="app.components.map.drawPath(52.912114, -1.185164)">Track<i class="material-icons right">location_searching</i></button>' +
-                '<button class="waves-effect col s12 btn-flat" type="submit" name="action" onclick="app.components.map.openData()">More Info<i class="material-icons right">info</i></button></div></div></div>';
 
             // Marker 3
             var infowindow3 = new google.maps.InfoWindow({
@@ -458,14 +450,14 @@ app.components = {
             marker6.addListener('click', function () {
                 infowindow6.open(map, marker6);
             });
-            
-            
+
+
             //Marker 7
             var infowindow7 = new google.maps.InfoWindow({
                 content: contentABK,
                 maxWidth: 223
             });
-            
+
             var marker7 = new google.maps.Marker({
                 position: {
                     lat: 52.911158,
@@ -473,13 +465,13 @@ app.components = {
                 },
                 map: map,
                 title: 'Ada Byron King '
-                
+
             });
             marker7.addListener('click', function () {
                 infowindow7.open(map, marker7);
             });
-            
-            
+
+
             //Marker 8
             var infowindow8 = new google.maps.InfoWindow({
                 content: contentISTEC,
@@ -498,8 +490,8 @@ app.components = {
             marker8.addListener('click', function () {
                 infowindow8.open(map, marker8);
             });
-            
-                
+
+
         },
         resetMap: function () {
             /* Reloads the map at location */
@@ -536,6 +528,7 @@ app.components = {
             }
         },
         drawPath: function (a, b) {
+            /*Draws a path between user and the building*/
             if (lineDraw != null) {
                 lineDraw.setMap(null);
             }
@@ -555,7 +548,13 @@ app.components = {
             lineDraw.setMap(map);
         },
         openData: function (building) {
-            $("#main").append("<div class=\"full-page animated slideInDown\"><div class=\"col s12 pink white-text\"><h2 style=\"padding: 0px;\">Building Name.</h2></div><div class=\"col s12 pink lighten-1 white-text\"> Short Description </div><div class=\"row\"><div class=\"col s12 m4 black-text image-info\"></div><div class=\"col s12 m8 white black-text\"> other data </div></div><button onclick=\"$('.full-page').remove();\">Close</button></div>");
+            var data = [["Ada Byron King", "Andrew Byron King is a building that is mainly used for theory-based classes, with a focus on the theory-based computing and support classes.", "Some words..."],
+                        ["ISTEC", "This impressive facility is the result of a £13m investment from the government and NTU in recognition of the importance of STEM teaching. The building will contain state-of-the-art laboratories for teaching, and this is where engineering practical and workshop sessions will initially be held. All lecture theatres and teaching and learning spaces will be equipped with the latest IT and Wi-Fi technology.", "Some words..."],
+                        ["Mary Anne Evans", "Mary Anne Evans is a lab-based building in which computing has 2 floors dedicated to practical based classes that take parts in labs.", "Some words..."],
+                        ["Erasmus Darwin", "Erasmus Darwin in a speciality building on Clifton Campus, with a state-of-the-art media lab for student who are interested in game design or digital media.", "Some words..."],
+                        ["John Clare Lecture Theatre", "A popular 150-seater lecture theatre for large hour-long lectures that takes place on Clifton Campus", "Some words..."],
+                        ["Pavillion", "Live and learn alongside 8,000 students, in a place where buzzing social venues, ultra-modern learning spaces and cosy accommodation combine to create a thriving student community.", "Some words..."]]
+            $("#main").append("<div class=\"full-page animated slideInDown\"><div class=\"col s12 pink white-text\"><h2 style=\"padding: 0px;\">" + data[building][0] + "</h2></div><div class=\"col s12 pink lighten-1 white-text\"> " + data[building][1] + " </div><div class=\"row\"><div class=\"col s12 m4 black-text image-info\" style=\"background-image: url('img/buildings/" + building + ".jpg');\"></div><div class=\"col s12 m8 white black-text\"> " + data[building][2] + " </div></div><a href='#' style='color: white; position: fixed; top: 8px; right: 8px;' onclick=\"$('.full-page').remove();\">X</a></div>");
         }
     }
 }
