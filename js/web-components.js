@@ -334,42 +334,42 @@ app.components = {
                 '<div class="infowindow">' +
                 '<div class="background" style=" padding:4px; background-image: url(\'img/buildings/0.jpg\'); padding-top: 80px;">ABK</div>' +
                 '<div id="bodyContent">' +
-                '<p>Augusta Ada King-Noel was a famous mathematician and writer who was mainly known for her work on Charles Babbages mechanical general-purpose computer which was named: the Analytical Engine. She was the first to recognise that the machine had applications beyond pure calculation, and published the first algorithm intended to be carried out by such a machine. Because of this, many people recognise here as the first ever programmer. </p>' +
+                '<p>Augusta Ada King-Noel was a famous mathematician and writer who was mainly known for her work on ...</p>' +
                 '<div class="row"><button class="btn waves-effect waves-light col s12" type="submit" name="action" onclick="app.components.map.drawPath(52.912114, -1.185164)">Track<i class="material-icons right">location_searching</i></button>' +
                 '<button class="waves-effect col s12 btn-flat" type="submit" name="action" onclick="app.components.map.openData(0)">More Info<i class="material-icons right">info</i></button></div></div></div>';
             var contentISTEC =
                 '<div class="infowindow">' +
                 '<div class="background" style=" padding:4px; background-image: url(\'img/buildings/1.jpg\'); padding-top: 80px;">ISTEC</div>' +
                 '<div id="bodyContent">' +
-                '<p>Our very latest building, the Interdisciplinary Science and Technology Centre (ISTeC). This impressive facility is the result of a £13m investment from the government and NTU in recognition of the importance of STEM teaching. The building will contain state-of-the-art laboratories for teaching, and this is where engineering practical and workshop sessions will initially be held. All lecture theatres and teaching and learning spaces will be equipped with the latest IT and Wi-Fi technology.</p>' +
+                '<p>Our very latest building, the Interdisciplinary Science and Technology Centre (ISTeC). This impressive ...</p>' +
                 '<div class="row"><button class="btn waves-effect waves-light col s12" type="submit" name="action" onclick="app.components.map.drawPath(52.912114, -1.185164)">Track<i class="material-icons right">location_searching</i></button>' +
                 '<button class="waves-effect col s12 btn-flat" type="submit" name="action" onclick="app.components.map.openData(1)">More Info<i class="material-icons right">info</i></button></div></div></div>';
             var contentMAE =
                 '<div class="infowindow">' +
                 '<div class="background" style=" padding:4px; background-image: url(\'img/buildings/2.jpg\'); padding-top: 80px;">Mary Anne Evans</div>' +
                 '<div id="bodyContent">' +
-                '<p>Mary Ann Evans was an English novelist, author, poet, journalist and translator by the pen name of George Elliot who was one of the leading writers of the Victorian era. This building is mainly used for computer based courses, such as computer science, and humanities. This building is also the home of Dev Soc, a club that continually pushes the boundaries in an attempt to make new technological discoveries. A very ideal place to be for those tech geeks out there.</p>' +
+                '<p>Mary Ann Evans was an English novelist, author, poet, journalist and translator by the pen name of George Elliot who ...</p>' +
                 '<div class="row"><button class="btn waves-effect waves-light col s12" type="submit" name="action" onclick="app.components.map.drawPath(52.911487, -1.184370)">Track<i class="material-icons right">location_searching</i></button>' +
                 '<button class="waves-effect col s12 btn-flat" type="submit" name="action" onclick="app.components.map.openData(2)">More Info<i class="material-icons right">info</i></button></div></div></div>';
             var contentERD =
                 '<div class="infowindow">' +
                 '<div class="background" style=" padding:4px; background-image: url(\'img/buildings/3.jpg\'); padding-top: 80px;">Erasmus Darwin</div>' +
                 '<div id="bodyContent">' +
-                '<p>Named after an English physician and founding member of the Lunar society of Birmingham, named Erasmus Darwin who was also the grandfather of Charles Darwin. This is the building where the majority of teachers reside during their time between lectures and lessons. As well as this, the Erasmus Darwin building is home to multiple facilities such as: green screen rooms and chemistry labs.</p>' +
+                '<p>Named after an English physician and founding member of the Lunar society of Birmingham, ...</p>' +
                 '<div class="row"><button class="btn waves-effect waves-light col s12" type="submit" name="action" onclick="app.components.map.drawPath(52.909893, -1.187050)">Track<i class="material-icons right">location_searching</i></button>' +
                 '<button class="waves-effect col s12 btn-flat" type="submit" name="action" onclick="app.components.map.openData(3)">More Info<i class="material-icons right">info</i></button></div></div></div>';
             var contentJCL =
                 '<div class="infowindow">' +
                 '<div class="background" style=" padding:4px; background-image: url(\'img/buildings/4.jpg\'); padding-top: 80px;">John Clare Lecture Theartre</div>' +
                 '<div id="bodyContent">' +
-                '<p>John Clare was an English poet who became known for his celebrations of the English countryside and sorrows at its disruption. The John Clare building is used solely for lectures and is outfitted with some of the largest lecture halls for mass teaching. This is where the majority of 1st year lectures will be held due to the large size of the rooms.</p>' +
+                '<p>John Clare was an English poet who became known for his celebrations of the English countryside ...</p>' +
                 '<div class="row"><button class="btn waves-effect waves-light col s12" type="submit" name="action" onclick="app.components.map.drawPath(52.911584, -1.185236)">Track<i class="material-icons right">location_searching</i></button>' +
                 '<button class="waves-effect col s12 btn-flat" type="submit" name="action" onclick="app.components.map.openData(4)">More Info<i class="material-icons right">info</i></button></div></div></div>';
             var contentPavilion =
                 '<div class="infowindow">' +
                 '<div class="background" style=" padding:4px; background-image: url(\'img/buildings/5.jpg\'); padding-top: 80px;">Pavillion</div>' +
                 '<div id="bodyContent">' +
-                '<p>The Pavilion building is a place for relaxation and it is also where you can grab a bight to eat. With a large cafeteria serving cheap and affordable breakfasts and lunches as well as a small café, where you ca sit and relax over a nice cuppa. On the second floor is a large seating area fitted with multiple comfy chairs and a selection of tables with large monitors for those group projects.</p>' +
+                '<p>The Pavilion building is a place for relaxation and it is also where you can grab a bight to eat. With a large cafeteria ...</p>' +
                 '<div class="row"><button class="btn waves-effect waves-light col s12" type="submit" name="action" onclick="app.components.map.drawPath(52.912114, -1.185164)">Track<i class="material-icons right">location_searching</i></button>' +
                 '<button class="waves-effect col s12 btn-flat" type="submit" name="action" onclick="app.components.map.openData(5)">More Info<i class="material-icons right">info</i></button></div></div></div>';
 
@@ -548,7 +548,7 @@ app.components = {
             lineDraw.setMap(map);
         },
         openData: function (building) {
-            $('body').css('overflow','hidden');
+            $('body').css('overflow', 'hidden');
             var data = [["Ada Byron King", "Andrew Byron King is a building that is mainly used for theory-based classes, with a focus on the theory-based computing and support classes.", "Augusta Ada King-Noel was a famous mathematician and writer who was mainly known for her work on Charles Babbage's mechanical general-purpose computer which was named: the Analytical Engine. She was the first to recognise that the machine had applications beyond pure calculation, and published the first algorithm intended to be carried out by such a machine. Because of this, many people recognise here as the first ever programmer."],
                         ["ISTEC", "This impressive facility is the result of a £13m investment from the government and NTU in recognition of the importance of STEM teaching. The building will contain state-of-the-art laboratories for teaching, and this is where engineering practical and workshop sessions will initially be held. All lecture theatres and teaching and learning spaces will be equipped with the latest IT and Wi-Fi technology.", "Our very latest building, the Interdisciplinary Science and Technology Centre (ISTeC). This impressive facility is the result of a £13m investment from the government and NTU in recognition of the importance of STEM teaching. The building will contain state-of-the-art laboratories for teaching, and this is where engineering practical and workshop sessions will initially be held. All lecture theatres and teaching and learning spaces will be equipped with the latest IT and Wi-Fi technology."],
                         ["Mary Anne Evans", "Mary Anne Evans is a lab-based building in which computing has 2 floors dedicated to practical based classes that take parts in labs.", "Mary Ann Evans was an English novelist, author, poet, journalist and translator by the pen name of George Elliot who was one of the leading writers of the Victorian era. This building is mainly used for computer based courses, such as computer science, and humanities. This building is also the home of Dev Soc, a club that continually pushes the boundaries in an attempt to make new technological discoveries. A very ideal place to be for those tech geeks out there."],
