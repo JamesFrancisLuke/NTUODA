@@ -44,16 +44,12 @@
                         <a href="#!email"><span class="white-text OTP-email">email@email.com</span></a>
                     </div>
                 </li>
-                <li><a class="waves-effect" href="#!">Open Day Details</a></li>
-                <li><a class="waves-effect" href="#!">Current Events</a></li>
-                <li><a class="waves-effect" href="#!">Event Log</a></li>
-                <li><a class="waves-effect" href="#!">Get food discount</a></li>
+                <li><a class="waves-effect modal-trigger" href="#modalCalendar">View Calendar</a></li>
                 <!-- Nikesh -->
                 <li>
                     <div class="divider"></div>
                 </li>
                 <li><a class="subheader">Account</a></li>
-                <li><a class="waves-effect" href="#!">Settings</a></li>
                 <li><a class="waves-effect" href="#logout" onclick="app.accounts.logOut()">Log Out</a></li>
             </ul>
             <a href="#" data-activates="slide-out" class="button-collapse white-text" id="menuIcon"><i class="material-icons">menu</i></a>
@@ -68,6 +64,56 @@
         <div class="container">
             <div class="row" id="eventsOutput">
             </div>
+        </div>
+    </div>
+
+    <div id="modalCalendar" class="modal bottom-sheet modal-fixed-footer">
+        <div class="modal-content">
+            <div class="row">
+                <div class="col s12 m12">
+                    <div class="card-panel white hoverable">
+                        <span class="black-text">00:00 - 9:00: Nothing</span>
+                    </div>
+                </div>
+                <div class="col s12 m12">
+                    <div class="card-panel blue hoverable" onclick="app.components.map.openData(0)">
+                        <span class="white-text">9:00 - 11:00: SQL Taster Session</span>
+                    </div>
+                </div>
+                <div class="col s12 m12">
+                    <div class="card-panel blue hoverable" onclick="app.components.map.openData(3)">
+                        <span class="white-text">11:00 - 13:00: Information Systems Taster Session</span>
+                    </div>
+                </div>
+                <div class="col s12 m12">
+                    <div class="card-panel orange hoverable" onclick="app.components.map.openData(5)">
+                        <span class="white-text">13:00 - 14:00: Food and Cafeteria Break</span>
+                    </div>
+                </div>
+                <div class="col s12 m12">
+                    <div class="card-panel blue hoverable" onclick="app.components.map.openData(1)">
+                        <span class="white-text">11:00 - 13:00: Information Systems Taster Session</span>
+                    </div>
+                </div>
+                <div class="col s12 m12">
+                    <div class="card-panel purple hoverable" onclick="app.components.map.openData(5)">
+                        <span class="white-text">13:00 - 14:00: Placement Support Session</span>
+                    </div>
+                </div>
+                <div class="col s12 m12">
+                    <div class="card-panel purple hoverable" onclick="app.components.map.openData(5)">
+                        <span class="white-text">14:00 - 16:00: Personal Statement Support Session</span>
+                    </div>
+                </div>
+                <div class="col s12 m12">
+                    <div class="card-panel white hoverable">
+                        <span class="black-text">16:00 - 00:00: Nothing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Done</a>
         </div>
     </div>
 
@@ -86,6 +132,9 @@
             messagingSenderId: "53318132645"
         };
         firebase.initializeApp(config);
+        $(document).ready(function() {
+            $('.modal').modal();
+        });
 
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gremlins.js/0.1.0/gremlins.min.js"></script>

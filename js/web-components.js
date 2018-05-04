@@ -3,6 +3,7 @@ var map;
 var posStore = [];
 var lineDraw;
 app.components = {
+    onboardingLevel: 0,
     /* Components is only for document components, all data interaction and database edition shouldn't happen in here. */
     showLogin: function () {
         /* Will take the user to login screen, and append and animate the document. */
@@ -12,7 +13,7 @@ app.components = {
     showOnboarding: function () {
         /* Creates and shows the onboarding proccess. */
         $("#logContent").empty();
-        $("#logContent").append("<p>We're going to suggest you a course, select some relevant courses: </p> <span><input type=\"checkbox\" id=\"chckDb\" /><label for=\"chckDb\">Databases</label><br></span><span><input type=\"checkbox\" id=\"chckInWork\" /><label for=\"chckInWork\">IT In Work</label><br></span><span><input type=\"checkbox\" id=\"chckDataMan\" /><label for=\"chckDataMan\">Data Manipulation</label><br></span><span><input type=\"checkbox\" id=\"chckMedia\" /><label for=\"chckMedia\">Media</label><br></span><span><input type=\"checkbox\" id=\"chckMobileDev\" /><label for=\"chckMobileDev\">Mobile Development</label><br></span><span><input type=\"checkbox\" id=\"chckNetwork\" /><label for=\"chckNetwork\">Networking</label><br></span><span><input type=\"checkbox\" id=\"chckHardware\" /><label for=\"chckHardware\">Computer Hardware</label><br></span><span><input type=\"checkbox\" id=\"chckWebDesign\" /><label for=\"chckWebDesign\">Web Design</label><br></span><span><input type=\"checkbox\" id=\"chckWebDev\" /><label for=\"chckWebDev\">Web Development</label></span> <br><br> <button class=\"btn pink waves-effect waves-light\" type=\"submit\" name=\"action\" onclick=\"app.accounts.data.onboardComplete()\">Complete Account<i class=\"material-icons right\">star</i></button>");
+        $("#logContent").append("<p>We're going to suggest you a course, select some relevant courses: </p> <br><br> <h2>Are you Interested in Web Development</h2>  <button class=\"btn pink waves-effect waves-light\" type=\"submit\" name=\"action\" onclick=\"app.accounts.data.onboardComplete()\">Complete Account<i class=\"material-icons right\">star</i></button>");
     },
     removeOverlay: function (name) {
         /*Removes the overlay*/
@@ -335,14 +336,14 @@ app.components = {
                 '<div class="background" style=" padding:4px; background-image: url(\'img/buildings/0.jpg\'); padding-top: 80px;">ABK</div>' +
                 '<div id="bodyContent">' +
                 '<p>Augusta Ada King-Noel was a famous mathematician and writer who was mainly known for her work on ...</p>' +
-                '<div class="row"><button class="btn waves-effect waves-light col s12" type="submit" name="action" onclick="app.components.map.drawPath(52.912114, -1.185164)">Track<i class="material-icons right">location_searching</i></button>' +
+                '<div class="row"><button class="btn waves-effect waves-light col s12" type="submit" name="action" onclick="app.components.map.drawPath(52.911158, -1.185074)">Track<i class="material-icons right">location_searching</i></button>' +
                 '<button class="waves-effect col s12 btn-flat" type="submit" name="action" onclick="app.components.map.openData(0)">More Info<i class="material-icons right">info</i></button></div></div></div>';
             var contentISTEC =
                 '<div class="infowindow">' +
                 '<div class="background" style=" padding:4px; background-image: url(\'img/buildings/1.jpg\'); padding-top: 80px;">ISTEC</div>' +
                 '<div id="bodyContent">' +
                 '<p>Our very latest building, the Interdisciplinary Science and Technology Centre (ISTeC). This impressive ...</p>' +
-                '<div class="row"><button class="btn waves-effect waves-light col s12" type="submit" name="action" onclick="app.components.map.drawPath(52.912114, -1.185164)">Track<i class="material-icons right">location_searching</i></button>' +
+                '<div class="row"><button class="btn waves-effect waves-light col s12" type="submit" name="action" onclick="app.components.map.drawPath(52.910909, -1.184520)">Track<i class="material-icons right">location_searching</i></button>' +
                 '<button class="waves-effect col s12 btn-flat" type="submit" name="action" onclick="app.components.map.openData(1)">More Info<i class="material-icons right">info</i></button></div></div></div>';
             var contentMAE =
                 '<div class="infowindow">' +
