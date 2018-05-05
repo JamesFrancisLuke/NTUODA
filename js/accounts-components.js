@@ -61,9 +61,7 @@ app.accounts = {
         /*For data manipulation*/
         onboardComplete: function () {
             /*For the Onboarding completion */
-            var skills = {
-                web: 10 //NEED TO CALCULATE THE SKILLS FOR THIS. (LOTS OF IF STATEMENTS ETC)
-            }
+            var skills = $("#selectCourse").val();
             firebase.database().ref('users/' + app.tempData.user.uid).set({
                 userId: app.tempData.user.uid,
                 email: app.tempData.user.email,

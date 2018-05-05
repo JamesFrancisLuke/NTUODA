@@ -13,7 +13,8 @@ app.components = {
     showOnboarding: function () {
         /* Creates and shows the onboarding proccess. */
         $("#logContent").empty();
-        $("#logContent").append("<p>We're going to suggest you a course, select some relevant courses: </p> <br><br> <h2>Are you Interested in Web Development</h2>  <button class=\"btn pink waves-effect waves-light\" type=\"submit\" name=\"action\" onclick=\"app.accounts.data.onboardComplete()\">Complete Account<i class=\"material-icons right\">star</i></button>");
+        $("#logContent").append("<p>We're going to suggest you a course, select some relevant courses: </p> <div class=\"input-field col s12\"><select id=\"selectCourse\"><option value=\"Computing\" selected>Computing</option><option value=\"Digital Media Technology\">Digital Media Technology</option><option value=\"ICT\">ICT</option><option value=\"Information Systems\">Information Systems</option></select><label>Select your Interested Course</label></div> <br> <br> <button class=\"btn pink waves-effect waves-light\" type=\"submit\" name=\"action\" onclick=\"app.accounts.data.onboardComplete()\">Complete Account<i class=\"material-icons right\">star</i></button>");
+        $('select').material_select();
     },
     removeOverlay: function (name) {
         /*Removes the overlay*/
@@ -522,10 +523,44 @@ app.components = {
 
                     map.setCenter(pos);
                 }, function () {
-                    console.log("Geolocation Error.");
+                    var pos = {
+                        lat: 52.909893,
+                        lng: -1.187050
+                    };
+                    posStore = [52.909893, -1.187050]
+
+                    var marker5 = new google.maps.Marker({
+                        position: pos,
+                        icon: {
+                            path: google.maps.SymbolPath.CIRCLE,
+                            scale: 5,
+                            strokeColor: 'rgb(233, 30, 99)'
+                        },
+                        map: map,
+                        title: 'User Position'
+                    });
+
+                    map.setCenter(pos);
                 });
             } else {
-                console.log("Geolocation Error.");
+                var pos = {
+                    lat: 52.909893,
+                    lng: -1.187050
+                };
+                posStore = [52.909893, -1.187050]
+
+                var marker5 = new google.maps.Marker({
+                    position: pos,
+                    icon: {
+                        path: google.maps.SymbolPath.CIRCLE,
+                        scale: 5,
+                        strokeColor: 'rgb(233, 30, 99)'
+                    },
+                    map: map,
+                    title: 'User Position'
+                });
+
+                map.setCenter(pos);
             }
         },
         drawPath: function (a, b) {
